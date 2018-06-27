@@ -30,3 +30,28 @@ gpg --full-generate-key
 #idem al anterior
 gpg --full-gen-key
 ```
+### Importar claves
+```bash
+#importar una clave pública
+gpg --import joskalpublic.key
+
+#importar una clave privada
+gpg --allow-secret-key-import --import joskalprivate.key
+```
+### Exportar claves
+```bash
+#exportar la clave pública de Juan Garcia a un fichero llamado juan_public.key 
+gpg --export -a "Juan Garcia" > juan_public.key
+
+#exportar la clave privada de Juan Garcia a un fichero llamado juan_private.key
+gpg --export-secret-key -a "Juan Garcia" > juan_private.key
+```
+
+### Listar claves
+```bash
+#listar claves privadas
+gpg --list-secret-keys
+
+#listar claves públicas
+gpg --list-keys
+```
