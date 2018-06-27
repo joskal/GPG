@@ -55,3 +55,21 @@ gpg --list-secret-keys
 #listar claves públicas
 gpg --list-keys
 ```
+
+### Encriptar y desencriptar ficheros
+```bash
+#encriptar un fichero con la clave pública del destinatario
+# -e, --encrypt               encrypt data
+# -r, --recipient USER-ID     encrypt for USER-ID
+gpg -e -r "USER-ID" nombre_fichero
+
+#encriptar un fichero con la clave pública del destinatario y firmarlo con nuestra clave privada
+# -u, --local-user USER-ID    use USER-ID to sign or decrypt
+gpg -e -u "Sender User Name" -r "Receiver User Name" nombre_fichero
+
+#desencriptar un fichero con clave pública
+#al hacerlo, gpg selecciona automáticamente la clave privada
+# -d, --decrypt               decrypt data (default)
+# -o, --output FILE           write output to FILE
+gpg -o nombrefichero.ext -d nombre_fichero.gpg
+```
