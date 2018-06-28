@@ -81,9 +81,19 @@ Siempre que firmemos un archivo lo haremos con una clave privada.
 ```bash
 #firmar el fichero einstein.txt con nuestra clave privada
 #fichero de salida: einstein.txt.gpg
+# -s, --sign                  make a signature
 gpg --sign einstein.txt
 
 #firmar einstein.txt en un formato legible
 #fichero de salida: einstein.sig
-gpg -o einstein.sig --clearsign einstein.txt
+# --clear-sign            make a clear text signature
+gpg -o einstein.sig --clear-sign einstein.txt
 ```
+
+Una firma acompañante es aquella que va unida intrínsecamente al fichero que se pretende autentificar.
+A la hora de verificarla se ha de hacerlo junto con el fichero que lo acompaña.
+```bash
+# Encriptar el fichero einstein.txt y Crear una firma acompañante del fichero ya encriptado con la clave privada de joskal
+# -b, --detach-sign           make a detached signature
+gpg -e einstein.txt
+gpg -u joskal -o einstein.sig --detach-sign einstein.txt.gpg
