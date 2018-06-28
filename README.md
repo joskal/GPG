@@ -58,6 +58,17 @@ gpg --list-secret-keys
 gpg --list-keys
 ```
 
+### Eliminar claves
+```bash
+#eliminar una clave privada
+gpg --delete-secret-key "Nombre de Usuario"
+
+#eliminar una clave pública.
+#si existe una clave privada asociada a la clave pública que
+#queremos eliminar debemos borrar antes la primera.
+gpg --delete-key "Nombre de Usuario"
+```
+
 ### Encriptar y desencriptar ficheros
 ```bash
 #encriptar un fichero con la clave pública del destinatario
