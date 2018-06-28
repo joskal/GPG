@@ -59,6 +59,14 @@ gpg --list-secret-keys
 gpg --list-keys
 ```
 
+### Editar claves
+gpg permite editar cualquier aspecto de la clave que hayamos creado o importado.
+```bash
+# --edit-key              sign or edit a key
+#editar la clave joskal
+gpg --edit-key joskal
+```
+
 ### Eliminar claves
 ```bash
 # --delete-keys           remove keys from the public keyring
