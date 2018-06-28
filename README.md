@@ -18,7 +18,7 @@ gpg --decrypt mensaje.txt.gpg
 ## Cifrado asimétrico
 En este tipo de cifrado crearemos el par de claves (pública y privada) junto con la firma para cifrar y descifrar los ficheros que queramos.
 
-### Generar una clave
+### Generar claves
 ```bash
 #Generar el par de claves con las opciones por defecto
 gpg --generate-key
