@@ -1,6 +1,8 @@
 # GPG
 GNU Privacy Guard
 
+![gpg](https://www.gnupg.org/share/logo-gnupg-light-purple-bg.png)
+
 ## Cifrado simétrico
 Es el cifrado más sencillo que ofrece **gpg**, solicitando una contraseña al cifrar un archivo. Es el método menos seguro.
 ```bash
