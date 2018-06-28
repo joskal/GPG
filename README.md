@@ -20,15 +20,14 @@ En este tipo de cifrado crearemos el par de claves (pública y privada) junto co
 
 ### Generar claves
 ```bash
+# --generate-key          generate a new key pair
+# --full-generate-key     full featured key pair generation
+
 #Generar el par de claves con las opciones por defecto
 gpg --generate-key
-#idem al anterior
-gpg --gen-key
 
 #Generar el par de claves estableciendo todas las opciones por nosotros
 gpg --full-generate-key
-#idem al anterior
-gpg --full-gen-key
 ```
 ### Importar claves
 ```bash
@@ -40,6 +39,8 @@ gpg --allow-secret-key-import --import joskalprivate.key
 ```
 ### Exportar claves
 ```bash
+# --export                export keys
+
 #exportar la clave pública de Juan Garcia a un fichero llamado juan_public.key
 # --export                export keys
 # -a, --armor                 create ascii armored output
@@ -60,6 +61,8 @@ gpg --list-keys
 
 ### Eliminar claves
 ```bash
+# --delete-keys           remove keys from the public keyring
+# --delete-secret-keys    remove keys from the secret keyring
 #eliminar una clave privada
 gpg --delete-secret-key "Nombre de Usuario"
 
