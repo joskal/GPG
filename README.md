@@ -93,7 +93,12 @@ gpg -o einstein.sig --clear-sign einstein.txt
 Una firma acompañante es aquella que va unida intrínsecamente al fichero que se pretende autentificar.
 A la hora de verificarla se ha de hacerlo junto con el fichero que lo acompaña.
 ```bash
-# Encriptar el fichero einstein.txt y Crear una firma acompañante del fichero ya encriptado con la clave privada de joskal
+# Encriptar el fichero einstein.txt y Crear una firma acompañante
+# del fichero ya encriptado con la clave privada de joskal
 # -b, --detach-sign           make a detached signature
 gpg -e einstein.txt
 gpg -u joskal -o einstein.sig --detach-sign einstein.txt.gpg
+
+# verificar el fichero de firma (ha de hacerse junto con el fichero que lo acompaña)
+gpg --verify einstein.sig einstein.txt.gpg
+```
