@@ -65,6 +65,16 @@ gpg permite editar cualquier aspecto de la clave que hayamos creado o importado.
 # --edit-key              sign or edit a key
 #editar la clave joskal
 gpg --edit-key joskal
+#agregar un nuevo identificador de usuario (userid)
+gpg> adduid gaditano
+#eliminar un user id 
+#primero seleccionamos el numero del userid con uid y después lo eliminamos
+#el numero de id está entre paréntesis al lado del nombre.
+gpg> list
+gpg> uid 1
+gpg> deluid 1
+#deseleccionar todos los userid
+gpg> uid 0
 ```
 
 ### Eliminar claves
