@@ -116,3 +116,7 @@ gpg -u joskal -o einstein.sig --detach-sign einstein.txt.gpg
 # verificar el fichero de firma (ha de hacerse junto con el fichero que lo acompaña)
 gpg --verify einstein.sig einstein.txt.gpg
 ```
+
+[GPG web oficial](https://www.gnupg.org/index.html)
+
+[GPG documentación en español](https://www.gnupg.org/gph/es/manual.html)
