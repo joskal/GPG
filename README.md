@@ -7,14 +7,12 @@ GNU Privacy Guard
 Es el cifrado más sencillo que ofrece **gpg**, solicitando una contraseña al cifrar un archivo. Es el método menos seguro.
 ```bash
 #cifrar fichero
+# -c, --symmetric             encryption only with symmetric cipher
 gpg -c mensaje.txt
-#idem al anterior
-gpg --symmetric mensaje.txt
 
 #descifrar fichero
+# -d, --decrypt               decrypt data (default)
 gpg -d mensaje.txt.gpg
-#idem
-gpg --decrypt mensaje.txt.gpg
 ```
 
 ## Cifrado asimétrico
