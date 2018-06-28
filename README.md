@@ -60,7 +60,7 @@ gpg --list-keys
 ```
 
 ### Editar claves
-gpg permite editar cualquier aspecto de la clave que hayamos creado o importado.
+gpg permite editar cualquier aspecto de la clave que hayamos creado o importado. La edición es interactiva; una vez dentro podemos modificar mediante comandos cualquier valor de la clave. El comando que siempre debemos recordar es **help**.
 ```bash
 # --edit-key              sign or edit a key
 #editar la clave joskal
