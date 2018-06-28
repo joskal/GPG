@@ -75,3 +75,15 @@ gpg -e -u "Sender User Name" -r "Receiver User Name" nombre_fichero
 # -o, --output FILE           write output to FILE
 gpg -o nombrefichero.ext -d nombre_fichero.gpg
 ```
+
+### Firmas
+Siempre que firmemos un archivo lo haremos con una clave privada.
+```bash
+#firmar el fichero einstein.txt con nuestra clave privada
+#fichero de salida: einstein.txt.gpg
+gpg --sign einstein.txt
+
+#firmar einstein.txt en un formato legible
+#fichero de salida: einstein.sig
+gpg -o einstein.sig --clearsign einstein.txt
+```
