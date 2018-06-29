@@ -48,13 +48,13 @@ gpg --fingerprint joskal@gmail.com
 gpg --fingerprint Jose
 gpg --fingerprint 'Jose Callealta'
 ```
-También podemos agregar nuevos user-id a las claves que nos interesen en la forma:
+También podemos agregar nuevos user-id a las claves que nos interesen de la siguiente forma:
 `gpg --quick-add-uid USER-ID nuevo_uid`
 ```bash
 #Agregar la palabra Cadiz como user-id a la clave de Jose Callealta
 gpg --quick-add-uid joskal@icloud.com Cadiz
 ```
-Donde pone 
+
 ### Importar claves
 ```bash
 #importar una clave pública
