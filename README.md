@@ -31,7 +31,7 @@ gpg --full-generate-key
 ```
 
 ### USER-ID
-Los identificadores de usuario (user-id) están formados por las palabras que introduzcamos en los campos de **Real name**, **email** y **comments**, cuando creamos un par de claves nuevas. Podemos invocar la clave que nos interese referenciandola por cualquier palabra que hayamos definido en los campos antes mencionados.
+Los identificadores de usuario (user-id) están formados por las palabras que introduzcamos en los campos de **Real name**, **email** y **comments**, cuando creamos un par de claves nuevas. Podemos invocar la clave que nos interese referenciandola por cualquier palabra que hayamos definido en los campos antes mencionados. La manera de comprobar los user-id y otros datos de una clave es comprobando la huella digital con la opción **--fingerprint**.
 ```bash
 gpg --fingerprint cadiz
 
