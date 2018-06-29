@@ -29,6 +29,32 @@ gpg --generate-key
 #Generar el par de claves estableciendo todas las opciones por nosotros
 gpg --full-generate-key
 ```
+
+### USER-ID
+Los identificadores de usuario (user-id) están formados por las palabras que introduzcamos en los campos de **Real name**, **email** y **comments**, cuando creamos un par de claves nuevas. Podemos invocar la clave que nos interese referenciandola por cualquier palabra que hayamos definido en los campos antes mencionados.
+```bash
+gpg --fingerprint cadiz
+
+pub   rsa2048 2018-06-26 [SC] [expires: 2023-06-25]
+      EF9F 8193 8956 7C57 118C  58E1 D7E7 933B B811 7CAC
+uid           [ unknown] cadiz
+uid           [ultimate] Jose Callealta <joskal@icloud.com>
+sub   rsa2048 2018-06-26 [E] [expires: 2023-06-25]
+
+# también podiamos haberla referenciado por su email -parcial o completo-
+gpg --fingerprint joskal
+gpg --fingerprint joskal@gmail.com
+# o también por el nombre
+gpg --fingerprint Jose
+```
+También podemos agregar nuevos user-id a las claves que nos interesen en la forma:
+
+**gpg --quick-add-uid USER-ID nuevo_uid**
+```bash
+Agregar la palabra Cadiz como user-id a la clave de Jose Callealta
+gpg --quick-add-uid joskal@icloud.com Cadiz
+```
+Donde pone 
 ### Importar claves
 ```bash
 #importar una clave pública
