@@ -101,6 +101,15 @@ gpg> uid 1
 gpg> deluid 1
 #deseleccionar todos los userid
 gpg> uid 0
+
+#Si la clave que estamos editando tiene también clave privada, podremos cambiar el password.
+gpg> password
+
+#mostrar el fingerprint
+gpg> fpr
+
+#list        list key and user IDs
+gpg> list
 ```
 
 ### Eliminar claves
