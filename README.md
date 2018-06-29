@@ -44,8 +44,9 @@ sub   rsa2048 2018-06-26 [E] [expires: 2023-06-25]
 # también podiamos haberla referenciado por su email -parcial o completo-
 gpg --fingerprint joskal
 gpg --fingerprint joskal@gmail.com
-# o también por el nombre
+# o también por el nombre -parcial o completo-
 gpg --fingerprint Jose
+gpg --fingerprint 'Jose Callealta'
 ```
 También podemos agregar nuevos user-id a las claves que nos interesen en la forma:
 
