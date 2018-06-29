@@ -154,6 +154,7 @@ A la hora de verificarla se ha de hacerlo junto con el fichero que lo acompaña.
 # Encriptar el fichero einstein.txt y Crear una firma acompañante
 # del fichero ya encriptado con la clave privada de joskal
 # -b, --detach-sign           make a detached signature
+# -u, --local-user USER-ID    use USER-ID to sign or decrypt
 gpg -e einstein.txt
 gpg -u joskal -o einstein.sig --detach-sign einstein.txt.gpg
 
