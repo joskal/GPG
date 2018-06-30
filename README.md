@@ -71,9 +71,14 @@ gpg --allow-secret-key-import --import joskalprivate.key
 # --export                export keys
 # -a, --armor                 create ascii armored output
 gpg --export -a "Juan Garcia" > juan_public.key
+# o también:
+gpg -o juan_public.key --export -a "Juan Garcia"
 
 #exportar la clave privada de Juan Garcia a un fichero llamado juan_private.key
 gpg --export-secret-key -a "Juan Garcia" > juan_private.key
+# o también:
+gpg -o juan_private.key --export-secret-key -a "Juan Garcia"
+
 ```
 
 ### Listar claves
